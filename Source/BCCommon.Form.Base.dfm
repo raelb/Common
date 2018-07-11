@@ -15,7 +15,7 @@ object BCBaseForm: TBCBaseForm
   Scaled = False
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
+  PixelsPerInch = 115
   TextHeight = 13
   object StatusBar: TBCStatusBar
     Left = 0
@@ -34,7 +34,6 @@ object BCBaseForm: TBCBaseForm
     AnimEffects.SkinChanging.Active = False
     ButtonsOptions.ShowFocusRect = False
     Active = False
-    IsDefault = False
     Saturation = 10
     InternalSkins = <>
     MenuSupport.ExtraLineFont.Charset = DEFAULT_CHARSET

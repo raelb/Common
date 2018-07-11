@@ -53,7 +53,7 @@ object SearchForFilesForm: TSearchForFilesForm
   OnDestroy = FormDestroy
   OnResize = FormResize
   OnShow = FormShow
-  PixelsPerInch = 96
+  PixelsPerInch = 115
   TextHeight = 13
   object PanelSearchingFiles: TBCPanel
     Left = 0
@@ -136,13 +136,6 @@ object SearchForFilesForm: TSearchForFilesForm
       Caption = 'ActionSearch'
       OnExecute = ActionSearchExecute
     end
-  end
-  object Taskbar: TTaskbar
-    TaskBarButtons = <>
-    ProgressMaxValue = 100
-    TabProperties = []
-    Left = 203
-    Top = 191
   end
   object SkinProvider: TsSkinProvider
     SkinData.SkinSection = 'FORM'

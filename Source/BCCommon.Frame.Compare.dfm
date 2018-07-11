@@ -1,8 +1,8 @@
 object CompareFrame: TCompareFrame
   Left = 0
   Top = 0
-  Width = 544
-  Height = 344
+  Width = 575
+  Height = 416
   DoubleBuffered = True
   Color = clWindow
   Padding.Left = 2
@@ -17,23 +17,26 @@ object CompareFrame: TCompareFrame
   object Panel: TBCPanel
     Left = 2
     Top = 1
-    Width = 540
-    Height = 341
+    Width = 571
+    Height = 413
     Align = alClient
     BevelOuter = bvNone
     Color = clWindow
     TabOrder = 0
     SkinData.SkinSection = 'CHECKBOX'
+    ExplicitWidth = 540
+    ExplicitHeight = 341
     object LeftPanel: TBCPanel
       Left = 0
       Top = 0
       Width = 247
-      Height = 341
+      Height = 413
       Align = alLeft
       BevelOuter = bvNone
       Color = clWindow
       TabOrder = 0
       SkinData.SkinSection = 'CHECKBOX'
+      ExplicitHeight = 341
       object LeftTopPanel: TBCPanel
         AlignWithMargins = True
         Left = 0
@@ -205,7 +208,7 @@ object CompareFrame: TCompareFrame
           Left = 0
           Top = 0
           Width = 151
-          Height = 21
+          Height = 24
           Margins.Left = 0
           Margins.Top = 0
           Margins.Right = 5
@@ -228,7 +231,7 @@ object CompareFrame: TCompareFrame
         Left = 0
         Top = 25
         Width = 247
-        Height = 316
+        Height = 388
         Cursor = crIBeam
         ActiveLine.Indicator.Visible = False
         Align = alClient
@@ -240,6 +243,7 @@ object CompareFrame: TCompareFrame
         CodeFolding.Hint.Font.Name = 'Courier New'
         CodeFolding.Hint.Font.Style = []
         CodeFolding.Hint.Indicator.Glyph.Visible = False
+        CodeFolding.Width = 16
         CompletionProposal.CloseChars = '()[]. '
         CompletionProposal.Columns = <
           item
@@ -285,6 +289,16 @@ object CompareFrame: TCompareFrame
         SpecialChars.Style = scsDot
         SyncEdit.ShortCut = 24650
         TabOrder = 1
+        TokenInfo.Font.Charset = DEFAULT_CHARSET
+        TokenInfo.Font.Color = clWindowText
+        TokenInfo.Font.Height = -13
+        TokenInfo.Font.Name = 'Courier New'
+        TokenInfo.Font.Style = []
+        TokenInfo.Title.Font.Charset = DEFAULT_CHARSET
+        TokenInfo.Title.Font.Color = clWindowText
+        TokenInfo.Title.Font.Height = -13
+        TokenInfo.Title.Font.Name = 'Courier New'
+        TokenInfo.Title.Font.Style = []
         WordWrap.Indicator.Bitmap.Data = {
           7E030000424D7E0300000000000036000000280000000F0000000E0000000100
           2000000000004803000000000000000000000000000000000000FF00FF00FF00
@@ -316,23 +330,26 @@ object CompareFrame: TCompareFrame
           FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
           FF00}
         WordWrap.Indicator.MaskColor = clFuchsia
+        ExplicitHeight = 316
       end
     end
     object RightPanel: TBCPanel
       Left = 296
       Top = 0
-      Width = 244
-      Height = 341
+      Width = 275
+      Height = 413
       Align = alClient
       BevelOuter = bvNone
       Color = clWindow
       TabOrder = 1
       SkinData.SkinSection = 'CHECKBOX'
+      ExplicitWidth = 244
+      ExplicitHeight = 341
       object RightTopPanel: TBCPanel
         AlignWithMargins = True
         Left = 0
         Top = 0
-        Width = 244
+        Width = 275
         Height = 22
         Margins.Left = 0
         Margins.Top = 0
@@ -347,6 +364,7 @@ object CompareFrame: TCompareFrame
         ParentDoubleBuffered = False
         TabOrder = 0
         SkinData.SkinSection = 'CHECKBOX'
+        ExplicitWidth = 244
         object SaveSpeedButton2: TBCSpeedButton
           Left = 25
           Top = 0
@@ -440,7 +458,7 @@ object CompareFrame: TCompareFrame
           SkinData.SkinSection = 'SPEEDBUTTON'
         end
         object BCSpeedButton1: TBCSpeedButton
-          Left = 222
+          Left = 253
           Top = 0
           Width = 22
           Height = 22
@@ -483,6 +501,7 @@ object CompareFrame: TCompareFrame
             FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00}
           SkinData.SkinSection = 'TOOLBUTTON'
           ImageIndex = 0
+          ExplicitLeft = 222
         end
         object BCSpeedButton3: TBCSpeedButton
           Left = 47
@@ -499,8 +518,8 @@ object CompareFrame: TCompareFrame
           AlignWithMargins = True
           Left = 69
           Top = 0
-          Width = 148
-          Height = 21
+          Width = 179
+          Height = 24
           Margins.Left = 0
           Margins.Top = 0
           Margins.Right = 5
@@ -516,13 +535,14 @@ object CompareFrame: TCompareFrame
           TabOrder = 0
           OnChange = ActionRightComboBoxChangeExecute
           UseMouseWheel = False
+          ExplicitWidth = 148
         end
       end
       object EditorRight: TBCEditor
         Left = 0
         Top = 25
-        Width = 244
-        Height = 316
+        Width = 275
+        Height = 388
         Cursor = crIBeam
         ActiveLine.Indicator.Visible = False
         Align = alClient
@@ -534,6 +554,7 @@ object CompareFrame: TCompareFrame
         CodeFolding.Hint.Font.Name = 'Courier New'
         CodeFolding.Hint.Font.Style = []
         CodeFolding.Hint.Indicator.Glyph.Visible = False
+        CodeFolding.Width = 16
         CompletionProposal.CloseChars = '()[]. '
         CompletionProposal.Columns = <
           item
@@ -579,6 +600,16 @@ object CompareFrame: TCompareFrame
         SpecialChars.Style = scsDot
         SyncEdit.ShortCut = 24650
         TabOrder = 1
+        TokenInfo.Font.Charset = DEFAULT_CHARSET
+        TokenInfo.Font.Color = clWindowText
+        TokenInfo.Font.Height = -13
+        TokenInfo.Font.Name = 'Courier New'
+        TokenInfo.Font.Style = []
+        TokenInfo.Title.Font.Charset = DEFAULT_CHARSET
+        TokenInfo.Title.Font.Color = clWindowText
+        TokenInfo.Title.Font.Height = -13
+        TokenInfo.Title.Font.Name = 'Courier New'
+        TokenInfo.Title.Font.Style = []
         WordWrap.Indicator.Bitmap.Data = {
           7E030000424D7E0300000000000036000000280000000F0000000E0000000100
           2000000000004803000000000000000000000000000000000000FF00FF00FF00
@@ -610,13 +641,15 @@ object CompareFrame: TCompareFrame
           FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
           FF00}
         WordWrap.Indicator.MaskColor = clFuchsia
+        ExplicitWidth = 244
+        ExplicitHeight = 316
       end
     end
     object DrawBarPanel: TBCPanel
       Left = 247
       Top = 0
       Width = 49
-      Height = 341
+      Height = 413
       Align = alLeft
       BevelOuter = bvNone
       Color = clWindow
@@ -625,6 +658,7 @@ object CompareFrame: TCompareFrame
       ParentDoubleBuffered = False
       TabOrder = 2
       SkinData.SkinSection = 'CHECKBOX'
+      ExplicitHeight = 341
       object TopMiddlePanel: TBCPanel
         Left = 0
         Top = 0
@@ -765,7 +799,7 @@ object CompareFrame: TCompareFrame
         Left = 3
         Top = 25
         Width = 43
-        Height = 316
+        Height = 388
         Margins.Bottom = 0
         Align = alClient
         ColCount = 1
@@ -776,6 +810,7 @@ object CompareFrame: TCompareFrame
         FixedRows = 0
         ScrollBars = ssVertical
         TabOrder = 1
+        ExplicitHeight = 316
       end
     end
   end

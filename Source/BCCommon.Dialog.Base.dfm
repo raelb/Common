@@ -16,7 +16,7 @@ object BCBaseDialog: TBCBaseDialog
   Scaled = False
   OnKeyPress = FormKeyPress
   OnShow = FormShow
-  PixelsPerInch = 96
+  PixelsPerInch = 115
   TextHeight = 13
   object SkinProvider: TsSkinProvider
     SkinData.SkinSection = 'FORM'

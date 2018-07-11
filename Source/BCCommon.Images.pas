@@ -3,7 +3,7 @@ unit BCCommon.Images;
 interface
 
 uses
-  System.SysUtils, System.Classes, Vcl.Controls, acAlphaImageList, Vcl.ImgList, System.ImageList;
+  System.SysUtils, System.Classes, Vcl.Controls, acAlphaImageList, Vcl.ImgList;
 
 const
   { small images }

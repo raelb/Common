@@ -5,8 +5,9 @@ interface
 uses
   Winapi.Windows, System.SysUtils, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls,
   Vcl.ActnList, Vcl.ImgList, BCControl.ImageList, VirtualTrees, BCControl.ProgressBar, Vcl.ComCtrls,
-  BCControl.ButtonedEdit, System.Win.TaskbarCore, Vcl.Taskbar, BCControl.Panel, sSkinProvider, BCControl.Statusbar,
-  System.Diagnostics, System.UITypes, System.Actions, sStatusBar, Vcl.StdCtrls, sPanel, System.ImageList;
+  BCControl.ButtonedEdit, {System.Win.TaskbarCore, Vcl.Taskbar,}
+   BCControl.Panel, sSkinProvider, BCControl.Statusbar,
+  System.Diagnostics, System.UITypes, System.Actions, sStatusBar, Vcl.StdCtrls, sPanel;
 
 type
   TOpenFileEvent = procedure(var AFileName: string);
@@ -19,7 +20,7 @@ type
     PanelSearchingFiles: TBCPanel;
     SkinProvider: TsSkinProvider;
     StatusBar: TBCStatusBar;
-    Taskbar: TTaskbar;
+    //Taskbar: TTaskbar;
     VirtualDrawTreeSearch: TVirtualDrawTree;
     ImageList: TImageList;
     procedure ActionClearExecute(Sender: TObject);
@@ -100,18 +101,18 @@ end;
 
 procedure TSearchForFilesForm.TaskBarStepChange(Sender: TObject);
 begin
-  Taskbar.ProgressValue := FProgressBar.Progress;
+  //Taskbar.ProgressValue := FProgressBar.Progress;
 end;
 
 procedure TSearchForFilesForm.TaskBarShow(Sender: TObject);
 begin
-  Taskbar.ProgressState := TTaskBarProgressState.Normal;
+  //Taskbar.ProgressState := TTaskBarProgressState.Normal;
 end;
 
 procedure TSearchForFilesForm.TaskBarHide(Sender: TObject);
 begin
-  if Assigned(Taskbar) then
-    Taskbar.ProgressState := TTaskBarProgressState.None;
+  //if Assigned(Taskbar) then
+  //  Taskbar.ProgressState := TTaskBarProgressState.None;
 end;
 
 procedure TSearchForFilesForm.CreateProgressBar;
@@ -296,7 +297,7 @@ end;
 
 procedure TSearchForFilesForm.FormDestroy(Sender: TObject);
 begin
-  Taskbar.ProgressState := TTaskBarProgressState.None;
+  //Taskbar.ProgressState := TTaskBarProgressState.None;
   FProgressBar.Free;
   VirtualDrawTreeSearch.Images.Free;
   FSearchForFilesForm := nil;

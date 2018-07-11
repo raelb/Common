@@ -48,8 +48,8 @@ object PrintPreviewForm: TPrintPreviewForm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
-  TextHeight = 13
+  PixelsPerInch = 115
+  TextHeight = 16
   object StatusBar: TBCStatusBar
     Left = 0
     Top = 498
@@ -84,6 +84,7 @@ object PrintPreviewForm: TPrintPreviewForm
       Min = 25
       Position = 100
       TabOrder = 0
+      TabStop = False
       TickStyle = tsNone
       OnChange = TrackBarZoomChange
       SkinData.SkinSection = 'TRACKBAR'

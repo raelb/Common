@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics, Vcl.Controls,
   Vcl.Forms, Vcl.Dialogs, BCComponent.TitleBar, BCComponent.SkinManager, BCControl.StatusBar, Vcl.ActnList,
-  BCControl.ProgressBar, Vcl.AppEvnts, Vcl.Menus, sSkinManager, System.Win.TaskbarCore, Vcl.Taskbar,
+  BCControl.ProgressBar, Vcl.AppEvnts, Vcl.Menus, sSkinManager,
+  {System.Win.TaskbarCore, Vcl.Taskbar, }
   System.Actions, sSkinProvider, acTitleBar, Vcl.ComCtrls, sStatusBar;
 
 type
@@ -27,7 +28,7 @@ type
   private
     FProgressBar: TBCProgressBar;
     FSkinChange: TNotifyEvent;
-    FTaskbar: TTaskbar;
+    //FTaskbar: TTaskbar;
     procedure CreateProgressBar;
     procedure ResizeProgressBar;
   public
@@ -61,7 +62,7 @@ end;
 
 procedure TBCBaseForm.FormDestroy(Sender: TObject);
 begin
-  FTaskbar.Free;
+  //FTaskbar.Free;
   FProgressBar.Free;
 
   inherited;
@@ -83,23 +84,23 @@ end;
 
 procedure TBCBaseForm.ProgressBarStepChange(Sender: TObject);
 begin
-  if Assigned(FTaskbar) then
-    FTaskbar.ProgressValue := FProgressBar.Progress;
+  //if Assigned(FTaskbar) then
+  //  FTaskbar.ProgressValue := FProgressBar.Progress;
 end;
 
 procedure TBCBaseForm.ProgressBarShow(Sender: TObject);
 begin
-  if not Assigned(FTaskbar) then
-    FTaskbar := TTaskBar.Create(Self);
-  ResizeProgressBar;
-  FTaskbar.ProgressMaxValue := FProgressBar.MaxValue;
-  FTaskbar.ProgressState := TTaskBarProgressState.Normal;
+//if not Assigned(FTaskbar) then
+//  FTaskbar := TTaskBar.Create(Self);
+//ResizeProgressBar;
+//FTaskbar.ProgressMaxValue := FProgressBar.MaxValue;
+//FTaskbar.ProgressState := TTaskBarProgressState.Normal;
 end;
 
 procedure TBCBaseForm.ProgressBarHide(Sender: TObject);
 begin
-  if Assigned(FTaskbar) then
-    FTaskbar.ProgressState := TTaskBarProgressState.None;
+//if Assigned(FTaskbar) then
+//  FTaskbar.ProgressState := TTaskBarProgressState.None;
 end;
 
 procedure TBCBaseForm.CreateProgressBar;
